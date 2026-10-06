@@ -1,0 +1,6 @@
+{
+  "name": "Vega – Discord Bot Tanıtım ve Yönetim Platformu",
+  "description": "183+ komut, yapay zeka sohbeti, gelişmiş güvenlik sistemleri, seviye ve ticket modülleriyle Discord sunucunuzu güçlendiren Türkçe bot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

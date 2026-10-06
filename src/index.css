@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-vega-bg: #000000;
+  --color-vega-surface: #07070b;
+  --color-vega-primary: #8b5cf6;
+  --color-vega-purple: #7c3aed;
+  --color-vega-light: #a78bfa;
+  --color-vega-pale: #c4b5fd;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #000000;
+    color: #f4f4f6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  html.light,
+  html.light body {
+    background-color: #f8f9fa !important;
+    color: #09090b !important;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Light Mode Adaptive Overrides */
+html.light .bg-\[\#000000\],
+html.light .bg-black,
+html.light .bg-\[\#0a0a0f\] {
+  background-color: #f8f9fa !important;
+}
+html.light .bg-\[\#12121a\],
+html.light .bg-\[\#12121a\]\/50,
+html.light .bg-\[\#12121a\]\/60 {
+  background-color: #ffffff !important;
+}
+html.light .text-white {
+  color: #09090b !important;
+}
+html.light .text-\[\#e5e5e5\],
+html.light .text-\[\#9ca3af\] {
+  color: #52525b !important;
+}
+html.light .vega-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.06) !important;
+}
+html.light .btn-white-pill {
+  background-color: #09090b !important;
+  color: #ffffff !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.5);
+}
+
+/* Scale AI / Framer / GPT-X Authentic Dark Glass Card */
+.vega-card {
+  background: linear-gradient(180deg, rgba(18, 18, 26, 0.72) 0%, rgba(8, 8, 12, 0.92) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 20px 40px -20px rgba(0, 0, 0, 0.85);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vega-card:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.14),
+    0 24px 48px -18px rgba(124, 58, 237, 0.22);
+}
+
+/* Subtle Architectural Grid Pattern inside Cards (GPT-X style) */
+.vega-grid-bg {
+  background-size: 32px 32px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Scale AI Iridescent Text Gradient (Purple -> Blue -> Pink -> Peach/Gold) */
+.scale-gradient-text {
+  background: linear-gradient(95deg, #8b5cf6 0%, #60a5fa 32%, #ec4899 68%, #fde047 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Signature High-Contrast White Pill Button (Scale AI / Framer / GPT-X) */
+.btn-white-pill {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn-white-pill:hover {
+  background-color: #f4f4f5;
+  transform: translateY(-1px);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.38);
+}
+
+/* Dark Outlined Pill Button */
+.btn-dark-pill {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dark-pill:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.32);
+}
